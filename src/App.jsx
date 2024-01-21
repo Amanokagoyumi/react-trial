@@ -21,6 +21,15 @@ function App() {
             Learn React
           </a>
         </p>
+        //現在のタブで開く
+<a href="https://www.google.com/">Text</a>
+//新しいタブで開く
+<a target="_blank" href="https://www.google.com/">Text</a>
+//https://www.pazru.net/html5/File/sample.txt
+<a target="_blank" href="https://www.pazru.net/html5/File/sample.txt">Text</a>
+//URL Schemeを使用する場合
+<a href="note:///www.pazru.net/html5/File/sample.txt">sample.txtへのリンク</a>
+<a href="nmobilenotes://www.pazru.net/html5/File/sample.txt">sample.txtへのリンク</a>
       </header>
     </div>
   );
