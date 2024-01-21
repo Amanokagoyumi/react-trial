@@ -1,4 +1,13 @@
 import './App.css';
+// import './css/sass/index.scss';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'; // eslint-disable-line import/no-extraneous-dependencies
+import AuthRoutes from '@/routes/AuthRoutes';
+// import ProtectedRoutes from '@/routes/ProtectedRoutes';
+import { CookiesProvider } from 'react-cookie'; // eslint-disable-line import/no-extraneous-dependencies
+// import { ReactQueryDevtools } from '@tanstack/react-query-devtools'; // eslint-disable-line import/no-extraneous-dependencies
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
