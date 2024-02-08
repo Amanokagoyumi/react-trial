@@ -1,4 +1,15 @@
 import './App.css';
+// import './css/sass/index.scss';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'; // eslint-disable-line import/no-extraneous-dependencies
+// import AuthRoutes from '@/routes/AuthRoutes';
+// import ProtectedRoutes from '@/routes/ProtectedRoutes';
+import { CookiesProvider } from 'react-cookie'; // eslint-disable-line import/no-extraneous-dependencies
+// import { ReactQueryDevtools } from '@tanstack/react-query-devtools'; // eslint-disable-line import/no-extraneous-dependencies
+import SignInSide from '@/components/sign-in-side/SignInSide';
+import Home from '@/components/home/Home';
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
@@ -22,14 +33,16 @@ function App() {
           </a>
         </p>
         //現在のタブで開く
-<a href="https://www.google.com/">Text</a>
+        <a href="https://www.google.com/">Text</a>
 //新しいタブで開く
-<a target="_blank" href="https://www.google.com/">Text</a>
+        <a target="_blank" href="https://www.google.com/">Text</a>
 //https://www.pazru.net/html5/File/sample.txt
-<a target="_blank" href="https://www.pazru.net/html5/File/sample.txt">Text</a>
+        <a target="_blank" href="https://www.pazru.net/html5/File/sample.txt">Text</a>
 //URL Schemeを使用する場合
-<a href="note:///www.pazru.net/html5/File/sample.txt">sample.txtへのリンク</a>
-<a href="nmobilenotes://www.pazru.net/html5/File/sample.txt">sample.txtへのリンク</a>
+        <a href="note:///www.pazru.net/html5/File/sample.txt">sample.txtへのリンク</a>
+        <a href="nmobilenotes://www.pazru.net/html5/File/sample.txt">sample.txtへのリンク</a>
+        <SignInSide />
+        {/* <Home /> */}
       </header>
     </div>
   );
